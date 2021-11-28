@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "An new experience for cafe's and restaurant's to allow customers view their menu by Scanning a QR code."
   }
 }
