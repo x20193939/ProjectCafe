@@ -1,29 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ImageBackground, Platform} from 'react-native';
+import React, { useState } from 'react';
+import { Switch, Text, TextInput, View } from 'react-native';
+/* import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import AppButton from './app/components /AppButton';
 
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import {MaterialCommunityIcons} from "@expo/vector-icons";
+ */
+import AppText from './app/components /AppText';
+import Card from './app/components /Card';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import Screen from './app/components /Screen';
+import Icon from "./app/components /Icon";
+import ListItem from './app/components /ListItem';
+import AccountScreen from './app/screens/AccountScreen';
+import MenuScreen from './app/screens/MenuScreen';
+import LoginScreen from './app/screens/LoginScreen';
+import AppTextInput from './app/components /AppTextInput';
+import AppPicker from './app/components /AppPicker';
+
+const categories = [
+  { label: "Beverages", value: 1 },
+  { label: "Gourmet Sandwiches", value: 2 },
+  { label: "Kids Food", value: 3 },
+];
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>
-        Welcome To FunGalaxy
-      </Text>
-      <Image source={require('./assets/Images/FGStacked.png')} resizeMode="cover"/>
-      {/* <StatusBar style="auto" />  */}
-    </SafeAreaView>
-  );
+  const [category, setCategory] = useState(categories[0]);
+  return <MenuScreen/>;
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#86A8e7',
-    justifyContent: "center",
-    alignItems: "center",
-   
-  },
-  /* Image: {
-    height: '200',
-    width: '300',
-    resizeMode: 'contain',
-  } */
-});
